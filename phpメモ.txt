@@ -1,0 +1,43 @@
+require_once();
+＝別ファイルに保存されているPHPスクリプトを一度だけ取り込む（重複しない）
+require_once('login.php');
+
+define();
+＝定数定義
+define('DB_USER','hogeUser');
+
+session_start();
+＝コンピュータのサーバ側に一時的にデータを保存する
+
+filter_var();
+＝指定したフィルタでデータをフィルタリング
+if(filter_var($変数, FILTER_VALIDATE_EMAIL))
+
+isset();
+＝変数がセットされているか調べる（=trueを返す）
+
+varchar(255)
+=(数字)を入れないとエラーが起きる
+
+--------------------------------------------
+create table booklist(
+    account_number int NOT NULL, 
+    account_name varchar(255) NOT NULL, 
+    mail_address varchar(255) NOT NULL, 
+    password varchar(255) NOT NULL, 
+    manager_flag boolean NOT NULL, 
+    logic_flag boolean NOT NULL,
+    PRIMARY KEY(`account_number`)
+    )ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
+    
+insert into booklist values
+(1,'abe','abe@gmail.com','abepass',false,true),
+('2','sato','sato@gmail.com','satopass',false,true),
+('3','take','take@gmail.com','takepass',false,true);
+------------------------------------------------
+
+viewsでDBのデータを表示させる方法
+https://seita-limitless.net/post-5628/
+1.Modelを作成
+2.Controllerにデータベースのテーブル処理指定を書く
+3.Viewに人のデータを表示する処理を書く
