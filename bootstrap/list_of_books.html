@@ -1,97 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ja">
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>DTGBOOK【書籍一覧】</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="css/list_of_books.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="list_of_books.css" rel="stylesheet">
-
+    <meta charset="utf-8">
+    <!-- viewport meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/list_of_books.css">
+    <style>
+        body {background-color: rgb(187, 239, 255);}
+        header {background-color: #fffef4;}
+        main {background-color: rgb(187, 239, 255);}
+    </style>
+    <title>DTGBOOK【書籍一覧】</title>
 </head>
-
 <body>
-
-  <div class="d-flex" id="wrapper">
-
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Start Bootstrap </div>
-      <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
-      </div>
-    </div>
-    <!-- /#sidebar-wrapper -->
-
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-          </ul>
+    <header>
+        <div id="header_button">
+            <img src="/Users/user/Documents/bootstrap/dtg_book_logo.png" id="icon" alt="アイコン" width="135" height="130" />
         </div>
-      </nav>
+        <div id="header" id="header_button">
+          <button type="button" class="btn btn-outline-danger pull-light">
+            書籍登録
+          </button>
+          <button type="button" class="btn btn-outline-danger pull-light">
+            カテゴリ管理
+          </button>
+          <button type="button" class="btn btn-outline-danger pull-light">
+            アカウント管理
+          </button>
+          <button type="button" class="btn btn-outline-secondary" onclick="location.href='file:///Users/user/Documents/bootstrap/list_of_books.html'">
+            書籍一覧
+          </button>
+          <button type="button" class="btn btn-outline-secondary pull-light">
+            マイページ
+          </button>
+          <button type="button" class="btn btn-outline-secondary" onclick="location.href='file:///Users/user/Documents/bootstrap/header.html'">
+            ログアウト
+          </button>
+        </div>
+    </header>
 
-      <div class="container-fluid">
-        <h1 class="mt-4">Simple Sidebar</h1>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+    <main>
+      <div id="search"><form>
+        <input id="sbox" name="s" type="text" placeholder="キーワードを入力" />
+      </form>
+      
+      <div class="dropdown">
+        <button type="button" id="dropdown" id="search"
+          class="btn btn-outline-secondary dropdown-toggle"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false">
+          カテゴリ検索
+        </button>
+        <ul class="dropdown-menu">
+          <li><button class="dropdown-item" value="RPA">RPA</button></li>
+          <li><button class="dropdown-item" value="統計学">統計学</button></li>
+          <li><button class="dropdown-item" value="AI">AI</button></li>
+        </ul>
       </div>
-    </div>
-    <!-- /#page-content-wrapper -->
+      
+      <div class="dropdown">
+        <button type="button"  id="dropdown" id="search"
+          class="btn btn-outline-secondary dropdown-toggle"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false">
+          並び替え
+        </button>
+        <ul class="dropdown-menu">
+          <li><button class="dropdown-item" value="発行年">発行年</button></li>
+          <li><button class="dropdown-item" value="著者">著者</button></li>
+          <li><button class="dropdown-item" value="タイトル">タイトル</button></li>
+        </ul>
+      </div>
+      <input id="sbtn" id="search" type="submit" value="検索" /></div>
 
-  </div>
-  <!-- /#wrapper -->
+      <div id="book_p">
+        <div id="book">
+          <img src="/Users/user/Documents/bootstrap/book_001.png" id="icon" alt="アイコン" width="135" height="130" />
+        </div>
+  
+        <div id="book">
+          <p>
+            タイトル：RPAのはじめかた
+          </p>
+          <p>
+            出版社：技術評論社
+          </p>
+          <p>
+            貸出状況：貸出可
+          </p>
+        </div>
+  
+        <div id="book">
+          <button type="button" class="btn btn-outline-secondary" onclick="location.href='file:///Users/user/Documents/bootstrap/information_of_book.html'">
+            詳細表示
+          </button>
+  
+          <button type="button" class="btn btn-outline-danger pull-light">
+            書籍編集
+          </button>
+        </div>
+      </div>
+    </main>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="jquery/jquery.min.js"></script>
-  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Menu Toggle Script -->
-  <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-  </script>
-
-</body>
-
+    <!-- jQuery、Popper.js、Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/dropdown.js"></script>
+  </body>
 </html>
