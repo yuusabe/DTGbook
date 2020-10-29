@@ -1,4 +1,9 @@
 /*中央揃え*/
+#book{
+  text-align: center;
+  color:#666
+}
+/*中央揃え*/
 #book_p{
   text-align: center;
 }
@@ -6,8 +11,13 @@
 #book{
   display: inline-block;
 }
+/*中央揃え*/
 #button{
   text-align: center;
+}
+#return{
+  text-align: center;
+  color:#666
 }
 /*ヘッダー右寄せ*/
 #header{
