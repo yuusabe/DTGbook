@@ -12,7 +12,7 @@
         header {background-color: #fffef4;}
         main {background-color: rgb(187, 239, 255);}
     </style>
-    <title>DTGBOOK【貸出情報確認】</title>
+    <title>DTGBOOK【書籍登録確認画面】</title>
 </head>
 <body>
     <header class="header_button">
@@ -42,38 +42,18 @@
     </header>
 
     <main>
-        <div id="book_p">
-            <div id="book">
-                <img src="book_001.png" id="icon" alt="アイコン" width="135" height="130" />
-            </div>
-            
-            <div id="book">
-                <p>
-                  タイトル：RPAのはじめかた
-                </p>
-                <p>
-                  出版社：技術評論社
-                </p>
-                <p>
-                  貸出状況：貸出可
-                </p>
-                <p>
-                    貸出期間：yyyyMMdd ~ yyyyMMdd
-                </p>
-            </div>
-        </div>
-        <div id="lend">
-            <p>貸出書籍の内容はこれでよろしいでしょうか</p>
+        <div id="category">
+            <p>書籍情報表示</p>
         </div>
 
         <div id="button">
                 
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='lend_book.html'">
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_add.html'">
                 キャンセル
             </button>
 
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='completion.html'">
-              確定
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='completion_book_add.html'">
+                確定
             </button>
 
         </div>
