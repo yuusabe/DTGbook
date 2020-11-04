@@ -11,14 +11,14 @@
         header {background-color: #fffef4;}
         main {background-color: rgb(187, 239, 255);}
     </style>
-    <title>DTGBOOK【カテゴリ管理画面】</title>
+    <title>DTGBOOK【書籍登録画面】</title>
 </head>
 <body>
     <header class="header_button">
         <div>
             <img src="dtg_book_logo.png" id="icon" alt="アイコン" width="135" height="130" />
         </div>
-        <button type="button" class="btn btn-outline-danger">
+        <button type="button" class="btn btn-outline-danger" onclick="location.href='book_add.html'">
             書籍登録
         </button>
         <button type="button" class="btn btn-outline-danger" onclick="location.href='category.html'">
@@ -38,23 +38,16 @@
         </button>
     </header>
     <main>
-        <p>カテゴリ</p>
-
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='list_of_books.html'">
-            削除
-        </button>
-
-        <div id="button">
-                
+        <p>書籍を登録します〜情報表示したり画像を選択</p>
+        <div id="book">
             <button type="button" class="btn btn-outline-secondary" onclick="location.href='list_of_books.html'">
-                キャンセル
+              キャンセル
             </button>
-
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='category_check.html'">
-                変更
+    
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_add_check.html'">
+              書籍登録
             </button>
-
-        </div>
+          </div>
     </main>
     <!-- jQuery、Popper.js、Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
